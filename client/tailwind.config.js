@@ -1,4 +1,5 @@
 require('dotenv').config();
+const defaultTheme = require('tailwindcss/defaultTheme');
 const enablePurge = process.env.NODE_ENV === 'production';
 
 module.exports = {
@@ -11,8 +12,16 @@ module.exports = {
     content: ['./projects/**/src/**/*.html', './projects/**/src/**/*.scss'],
   },
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/ui')({
+      layout: 'sidebar',
+    }),
+  ],
 };
