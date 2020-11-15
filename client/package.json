@@ -7,6 +7,7 @@
     "build:default:production": "ng build --prod",
     "e2e": "run-s e2e:default",
     "e2e:default": "cypress open --project ./projects/default/e2e",
+    "format": "prettier --config ./.prettierrc --write \"projects/*/src/{app,environments,assets}/**/*{.ts,.js,.json,.css,.scss}\"",
     "format:check": "prettier --config ./.prettierrc --list-different \"projects/*/src/{app,environments,assets}/**/*{.ts,.js,.json,.css,.scss}\"",
     "format:fix": "pretty-quick --staged",
     "lint": "run-s lint:default",
