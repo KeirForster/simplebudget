@@ -18,10 +18,8 @@ module.exports = {
       },
     },
   },
-  variants: {},
-  plugins: [
-    require('@tailwindcss/ui')({
-      layout: 'sidebar',
-    }),
-  ],
+  variants: {
+    backgroundColor: ({ after }) => after(['active']),
+  },
+  plugins: [require('@tailwindcss/ui')],
 };
