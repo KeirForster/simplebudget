@@ -1,12 +1,12 @@
 <div class="w-96">
   <div class="relative pb-5/6 rounded-lg overflow-hidden">
-    <img [src]="card.imageUrl" [alt]="card.imageAlt" class="absolute h-full w-full object-cover" />
+    <img [src]="card.imageUrl" [alt]="card.imageAlt" class="h-full w-full object-cover" />
   </div>
   <div class="px-4">
     <div class="p-6 -mt-10 bg-white relative z-10 rounded-lg shadow-lg">
       <div class="flex items-baseline">
         <span
-          class="inline-block bg-teal-200 text-teal-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide"
+          class="inline-block bg-green-200 text-green-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide"
           >New</span
         >
         <div class="text-gray-500 text-xs uppercase font-semibold tracking-wide ml-2">
@@ -20,7 +20,7 @@
           <div *ngFor="let rating of [1, 2, 3, 4, 5]" class="flex-initial self-center font-semibold">
             <svg
               class="h-4 fill-current"
-              [class.text-teal-500]="rating <= card.rating"
+              [class.text-green-500]="rating <= card.rating"
               [class.text-gray-400]="rating > card.rating"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
