@@ -23,8 +23,13 @@
             "polyfills": "projects/default/src/polyfills.ts",
             "tsConfig": "projects/default/tsconfig.app.json",
             "aot": true,
-            "assets": ["projects/default/src/favicon.ico", "projects/default/src/assets"],
-            "styles": ["projects/default/src/styles.scss"],
+            "assets": [
+              "projects/default/src/favicon.ico",
+              "projects/default/src/assets"
+            ],
+            "styles": [
+              "projects/default/src/styles.scss"
+            ],
             "scripts": [],
             "customWebpackConfig": {
               "path": "./webpack.config.js"
@@ -82,14 +87,12 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/default/tsconfig.app.json",
-              "projects/default/tsconfig.spec.json",
-              "projects/default/e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
+            "lintFilePatterns": [
+              "projects/default/**/*.ts",
+              "projects/default/**/*.html"
+            ]
           }
         }
       }
