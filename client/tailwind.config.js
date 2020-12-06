@@ -1,4 +1,5 @@
 require('dotenv').config();
+const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
 const enablePurge = process.env.NODE_ENV === 'production';
 
@@ -15,7 +16,9 @@ module.exports = {
     },
   },
   variants: {
-    backgroundColor: ({ after }) => after(['active']),
+    extend: {
+      backgroundColor: ['active'],
+    },
   },
   plugins: [],
 };
