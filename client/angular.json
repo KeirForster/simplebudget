@@ -15,7 +15,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/default",
             "index": "projects/default/src/index.html",
@@ -23,17 +23,9 @@
             "polyfills": "projects/default/src/polyfills.ts",
             "tsConfig": "projects/default/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "projects/default/src/favicon.ico",
-              "projects/default/src/assets"
-            ],
-            "styles": [
-              "projects/default/src/styles.scss"
-            ],
-            "scripts": [],
-            "customWebpackConfig": {
-              "path": "./webpack.config.js"
-            }
+            "assets": ["projects/default/src/favicon.ico", "projects/default/src/assets"],
+            "styles": ["projects/default/src/styles.scss"],
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -67,12 +59,9 @@
           }
         },
         "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "default:build",
-            "customWebpackConfig": {
-              "path": "./webpack.config.js"
-            }
+            "browserTarget": "default:build"
           },
           "configurations": {
             "production": {
@@ -89,10 +78,7 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "projects/default/**/*.ts",
-              "projects/default/**/*.html"
-            ]
+            "lintFilePatterns": ["projects/default/**/*.ts", "projects/default/**/*.html"]
           }
         }
       }
