@@ -15,8 +15,7 @@
         "plugin:@angular-eslint/ng-cli-compat",
         "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
         "plugin:@angular-eslint/template/process-inline-templates",
-        "prettier",
-        "prettier/@typescript-eslint"
+        "prettier"
       ],
       "rules": {}
     },
